@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+.top-left{
+    /* background-color: blue; */
+    left: 0;
+    top: 0;
+    animation: FadeInDireita 5s forwards;
+}
+
+.top-right {
+    right: 0;
+    top: 0;
+    /* background-color: yellow; */
+    animation: FadeInBaixo 5s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.bottom-left{
+    bottom: 0;
+    left: 0;
+    /* background-color: green; */
+    animation: FadeInCima 5s forwards;
+    animation-delay: 5s;
+    opacity: 0;
+    
+}
+
+.bottom-right {
+    right: 0;
+    bottom: 0;
+    /* background-color: red; */
+    animation: FadeInEsquerda 5s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+img {
+    width: 100%;
+}
+
+@keyframes FadeInDireita {
+    0% {
+        transform: translateX(-500px);
+    }
+
+    30%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(2000px);
+        opacity: 0;
+    }
+}
+
+@keyframes FadeInBaixo {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(2000px);
+        opacity: 0;
+    }
+}
+
+@keyframes FadeInEsquerda {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+}
+
+@keyframes FadeInCima {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-2000px);
+        opacity: 1;
+    }
+}
